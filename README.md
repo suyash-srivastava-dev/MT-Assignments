@@ -1,6 +1,6 @@
 # MT-Assignments
 
-## Assignment 1
+## Assignment 1 (https://suyash-srivastava-dev.github.io/MT-Assignments/index.html)
 
 Translate a text  from technical document using following translators: (around 2million characters)
 
