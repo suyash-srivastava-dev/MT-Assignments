@@ -1,0 +1,190 @@
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title></title>
+    <meta name="generator" content="LibreOffice 7.3.6.2 (Linux)">
+    <meta name="created" content="2022-10-30T14:25:13">
+    <meta name="changed" content="2022-10-30T22:22:42">
+    <meta name="AppVersion" content="15.0000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assign3.css">
+    <style type="text/css">
+        body,
+        div,
+        table,
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        th,
+        td,
+        p {
+            font-family: "Arial";
+            font-size: x-small;
+
+        }
+
+        a.comment-indicator:hover+comment {
+            background: #ffd;
+            position: absolute;
+            display: block;
+            border: 1px solid black;
+            padding: 0.5em;
+        }
+
+        a.comment-indicator {
+            background: red;
+            display: inline-block;
+            border: 1px solid black;
+            width: 0.5em;
+            height: 0.5em;
+        }
+
+        comment {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Machine Translation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: 20;" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" style="font-size: 20;" href="../Assignment 1/assignment1.html">Assignment
+                            1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size: 20;" href="./assignment3.html">Assignment 3</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="font-size: 20;">
+                            Assignments
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Assignment 1/assignment1.html">Assignment
+                                1</a></li>
+                            <li><a class="dropdown-item" href="../Assignment-3/assignment3.html">Assignment 3</a></li>
+                            <li><a class="dropdown-item" href="../Assignment-4/assignment4.html">Assignment 4</a></li>
+                            <li><a class="dropdown-item" href="../Assignment-5/assignment5.html">Assignment 5</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="../index.html">All Assignments</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+
+    </nav>
+    <center>
+        <h1>Assignment-03 IBM1 model for Machine Translation</h1>
+    </center>
+
+    <div class="question">
+        <p>
+            <br>
+            <br>
+            <br>
+            I)
+            <b>Develop an IBM1 Model for Source (S1) and Target (Ti) language. (around 20/50/100 sentences)</b>
+            <br>
+            Get the translation from translation tools T1-T5 Translation.
+            For each translation develop IBM1 model and compare your results
+            Analyze each translation with respect to problems like picking
+            the wrong word sense of a polysemous word, or word ordering problems,
+            or other problems. Document your observation explicitly for each sentence.
+            <br>
+
+            Generate a table containing the word translation probabilities that were learned
+            List the reference sentence and the translated sentence using IBM1 model.
+            Plot graphs for your results
+            Compare alignments with mixed case versus lowercase.
+            Generate an alignment in the opposite direction
+            Calculate p(e|f) for the first three sentences.
+            <br>
+
+            Use the following word alignment tool
+            http://www.cis.uni-muenchen.de/~fraser/nepal/align_browser_and_german_short.zip
+            Customize the tool for your sent of translations
+            <br>
+            <br>
+
+            <b>
+                II)
+
+
+                Download the data from the joshua indian corpora page (google: joshua indian corpora), ideally you
+                should only use a small number of short sentences at first, so that things run quickly.
+                Take a set of sentences which have prior correct reference translation. Take 5 sentences for which you
+                get bad output from T1-T5 translators. Translate them again, preferably from a different IP
+                address. Compare the outcome</b>
+            <br>
+
+            Take the first 5 sentences of the *training* data for the language
+            you are working with from the Indian Parallel Corpora. Try these
+            sentences in T1-T5 translators (in the Hindi/Tamil/Urdu to English
+            direction). Compare the outputs with the
+            English parallel sentences Document your observations about different English translations. Compare all the
+            translators. Analyze the issues caused by phrase-based SMT.
+            <br>
+            <br>
+
+        </p>
+    </div>
+    <div class="solution">
+        <p>
+            <a href="https://www.kaggle.com/code/garbo999/machine-translation-ibm-model-1-em-algorithm/notebook"> Python
+                notebook implementation for IBM Model 1</a>
+        </p>
+    </div>
+</body>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://github.com/suyash-srivastava-dev">Suyash Srivastava</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>
