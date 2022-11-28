@@ -112,64 +112,68 @@
 
     </nav>
     <center>
-        <h1>Assignment-03 IBM1 model for Machine Translation</h1>
+        <h5>Assignment-04 Extraction of Syntactic Translation Models from Parallel Data using Syntax from Source and Target Languages</h1>
     </center>
 
     <div class="question">
-        <p>
-            <br>
-            <br>
-            <br>
-            I)
-            <b>Develop an IBM1 Model for Source (S1) and Target (Ti) language. (around 20/50/100 sentences)</b>
-            <br>
-            Get the translation from translation tools T1-T5 Translation.
-            For each translation develop IBM1 model and compare your results
-            Analyze each translation with respect to problems like picking
-            the wrong word sense of a polysemous word, or word ordering problems,
-            or other problems. Document your observation explicitly for each sentence.
-            <br>
-
-            Generate a table containing the word translation probabilities that were learned
-            List the reference sentence and the translated sentence using IBM1 model.
-            Plot graphs for your results
-            Compare alignments with mixed case versus lowercase.
-            Generate an alignment in the opposite direction
-            Calculate p(e|f) for the first three sentences.
-            <br>
-
-            Use the following word alignment tool
-            http://www.cis.uni-muenchen.de/~fraser/nepal/align_browser_and_german_short.zip
-            Customize the tool for your sent of translations
-            <br>
-            <br>
-
-            <b>
-                II)
-
-
-                Download the data from the joshua indian corpora page (google: joshua indian corpora), ideally you
-                should only use a small number of short sentences at first, so that things run quickly.
-                Take a set of sentences which have prior correct reference translation. Take 5 sentences for which you
-                get bad output from T1-T5 translators. Translate them again, preferably from a different IP
-                address. Compare the outcome</b>
-            <br>
-
-            Take the first 5 sentences of the *training* data for the language
-            you are working with from the Indian Parallel Corpora. Try these
-            sentences in T1-T5 translators (in the Hindi/Tamil/Urdu to English
-            direction). Compare the outputs with the
-            English parallel sentences Document your observations about different English translations. Compare all the
-            translators. Analyze the issues caused by phrase-based SMT.
-            <br>
-            <br>
-
-        </p>
+      <p>
+        Problem Statement: 
+        <br>
+        <br>Extraction of Syntactic Translation Models for  English -Indic language pair 
+        <br>Demonstrate your  framework  for  different categories of sentences. Take at least 100  sentences for each category. Make sure you collect sentences of different lengths ( less than 10 words; 11-20 words; 20-40 words; 40+ words)
+        <br> Type                                       Example
+        <br>Declarative Sentences   ( The Sun rises in the East  )
+        <br>Interrogative Sentences  (What are the major differences between metals and non-metals?)
+        <br>Exclamatory Sentences  (That was a great match!)
+        <br>Imperative Sentences     (Please pick up the notes when you come.)
+        <br>Compound Sentences      (Rahul did not complete his homework, so the teacher punished him.)
+        <br>Complex Sentences          (The children were asked to go home because it was too late.)
+        <br>Long-distance dependencies       (The man next to the large oak tree near the grocery store on the corner is tall.
+        <br>                                                         The men next to the large oak tree near the grocery store on the corner are tall.
+        <br>                                                        The bird next to the large oak tree near the grocery store on the corner flies rapidly.
+        <br>                                                         The man next to the large oak tree near the grocery store on the corner talks rapidly.)
+        <br>News Headlines            ( Incessant heavy rainfall causes waterlogging in parts of Delhi)
+        <br>Active sentences  
+        <br>
+        <br>She bought a new car. Passive voice: A new car was bought by her.
+        <br>Passive sentences: 
+        <br>                 Reversible      ( The baby was kissed on the head by the lady)
+        <br>                Nonreversible   ( The milk was spilled by the boy)
+        <br>                 Ambiguous       (The fish was eaten)
+        <br> OR Sentences                      (Sometimes he would take care of the whole flock while the shepherd was resting  eating his dinner.)
+        <br>                                                 ( The goat that the pig had bumped near the bush was smiling)
+        <br>SVO Structured     (The boy smiling is consoling the little girl crying)
+        <br>idioms                     (the spirit is willing but the flesh is weak)  (सोने पर सुहागा)
+        <br>You may collect sentences from : https://sentence.yourdictionary.com/
+        <br>Learn a Language With Sentence Mining
+        <br>
+        <br>In addition, include Some ill formed translations and try to explain the reasons.   
+        <br>                                           (The train that the knife had helped under the square was cold)
+        <br>
+        <br>Explain your methodology
+        <br>Examine your approach based on any  or combination of the following approaches:
+        <br>Hierarchical Phrase-based Translation
+        <br>Inversion transduction grammar (ITG) 
+        <br>Bracketing Transduction Grammar (BTG)
+        <br>Panini grammar 
+        <br>
+        <br>To be reported: 
+        <br>Total number of Sentences
+        <br>Number of words
+        <br>Number of unique words
+        <br>Evaluation metrics for sentence level : BLEU, METEOR, spearman, ..
+        <br>Check the type of sentence in source and translated language. Is the form same/different, one-to- many forms
+        <br>Perplexity  vs different dataset sizes
+        <br>Perplexity vs different length of sentences
+        <br>Perplexity vs type of sentences
+        <br>Perplexity vs iterations
+        <br>Also summarize issues and challenges faced and the ways to mitigate them.
+        <br>List possible application area of your work.
+      </p>
     </div>
     <div class="solution">
         <p>
-            <a href="https://www.kaggle.com/code/garbo999/machine-translation-ibm-model-1-em-algorithm/notebook"> Python
-                notebook implementation for IBM Model 1</a>
+           
         </p>
     </div>
 </body>

@@ -1,0 +1,11 @@
+./plain2snt.out ../ibm1/english.en ../ibm1/googleTranslated.hi
+
+
+./snt2cooc.out ../ibm/english.en.vcb ../ibm1/googleTranslated.hi.vcb ../ibm1/english.en_googleTranslated.hi.snt > ../ibm1/corp.cooc
+
+./GIZA++ -S ../ibm1/english.en.vcb -T ../ibm1/googleTranslated.hi.vcb -C ../ibm1/english.en_googleTranslated.hi.snt -CoocurrenceFile ../ibm1/corp.cooc -outputpath ../ibm1/
+
+
+./GIZA++ -S ../parallel-n/IITB.en-hi.en.vcb -T ../parallel-n/IITB.en-hi.hi.vcb -C
+../parallel-n/IITB.en-hi.en_IITB.en-hi.hi.snt -CoocurrenceFile ../parallel-n/corp.cooc -outputpath
+../parallel-n/
