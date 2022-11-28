@@ -53,6 +53,15 @@
 </head>
 
 <body>
+    <script src="./script3.js"></script>
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+<!-- Load the element definition -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+<!-- Simply set the `src` attribute to your MD file and win -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
@@ -166,12 +175,33 @@
 
         </p>
     </div>
-    <div class="solution">
+    <center><div class="solution">
         <p>
+            <b>References</b>
+            <br>
             <a href="https://www.kaggle.com/code/garbo999/machine-translation-ibm-model-1-em-algorithm/notebook"> Python
                 notebook implementation for IBM Model 1</a>
+            <br>
+            <a href="https://sinaahmadi.github.io/posts/sentence-alignment-using-giza.html">GIZA++ implementation</a>
         </p>
     </div>
+    <button class="btn btn-primary" onclick="myFunction()">Next Alignment</button></center>
+
+<div id="myDIV">
+    <zero-md class="question"src="./BingTranslatedAllignment.md"></zero-md>
+</div>
+<div id="myDIV">
+    <zero-md class="question"src="./GoogleTranslatedAllignment.md"></zero-md>
+</div>
+
+
+    <!-- <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+ -->
+
 </body>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
