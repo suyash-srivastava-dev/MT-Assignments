@@ -45,12 +45,26 @@
 		comment {
 			display: none;
 		}
+
+		.carousel{
+			/* background-color: black; */
+			width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.carouselName{
+			color: black;
+			outline-color: black;
+			border-color: black;
+			outline-width: thick;
+		}
 	</style>
 	<style>
 		ul#menu li {
 			display: inline;
 		}
 	</style>
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
@@ -60,7 +74,7 @@
 		crossorigin="anonymous"></script>
 	<nav class="navbar navbar-expand-lg bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand">Machine Translation</a>
+			<a class="navbar-brand">MTech AI</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -71,293 +85,81 @@
 					<li class="nav-item">
 						<a class="nav-link" style="font-size: 20;" aria-current="page" href="./index.html">Home</a>
 					</li>
-					<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" style="font-size: 20;">
-                            Assignments
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./Assignment 1/assignment1.html">Assignment
-                                1</a></li>
-                            <li><a class="dropdown-item" href="./Assignment-3/assignment3.html">Assignment 3</a></li>
-							<li><a class="dropdown-item" href="./Assignment-4/assignment4.html">Assignment 4</a></li>
-                            <li><a class="dropdown-item" href="./Assignment-5/assignment5.html">Assignment 5</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="index.html">All Assignments</a></li>
-                        </ul>
-                    </li>
-					<!-- <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				  Dropdown
-				</a>
-				<ul class="dropdown-menu">
-				  <li><a class="dropdown-item" href="#">Action</a></li>
-				  <li><a class="dropdown-item" href="#">Another action</a></li>
-				  <li><hr class="dropdown-divider"></li>
-				  <li><a class="dropdown-item" href="#">Something else here</a></li>
+					<li class="nav-item">
+						<a class="nav-link" style="font-size: 20;" aria-current="page"
+							href="./indexMT.html">MT-Assignment</a>
+					</li>
+			
 				</ul>
-			  </li> -->
-				</ul>
-				<!-- <form class="d-flex" role="search">
-			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-			  <button class="btn btn-outline-success" type="submit">Search</button>
-			</form> -->
 			</div>
 		</div>
 	</nav>
+	<div class=""></div>
+	<div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+				aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+				aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<a href="./DeepLearning/notes.html"><img src="./Assets/image/4752203.jpg" height="600" class="d-block w-100" alt="first"></a>
+				<div class="carousel-caption d-none d-sm-block">
+					<h2 class="carouselName">Deep Learning Notes</h2>
+					<!-- <p>Some representative placeholder content for the first slide.</p> -->
+				</div>
+			</div>
+			<div class="carousel-item">
+				<a href="./indexMT.html"> <img src="./Assets/image/2car.jpg" height="600" class="d-block w-100" alt="second"> </a>
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Machine Translation</h5>
+					<!-- <p>Some representative placeholder content for the second slide.</p> -->
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="./Assets/image/3car.jpg" height="600" class="d-block w-100" alt="third">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Third slide label</h5>
+					<p>Some representative placeholder content for the third slide.</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+	<script src="./index.js"></script>
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="card" style="width: 30rem; margin: 1rem;">
-					<!-- <img src="./Assets/Assign1.png" class="card-img-top" alt="assignment1 Image"> -->
-					<div class="card-body">
-						<h5 class="card-title" style="font-size:x-large;color: #0a53be;">
-							Assignment-01</h5>
-						<p class="card-text" style="font-size:large">Translation score based on Adequacy and Fluency</p>
-						<a href="./Assignment 1/assignment1.html" class="btn btn-primary">Solution</a>
-						<a href="./Assignment 1/Translation_Scores.pdf" download class="btn btn-secondary">Download <i
-								class="bi bi-download"></i></a>
-						<div>
-							<p>
-								<button style="border-radius:10px; margin-top:8px; color:dimgray"><a class="btn"
-										style="color:black;" data-bs-toggle="collapse" href="#collapseExample"
-										role="button" aria-expanded="false" aria-controls="collapseExample">
-										Details
-									</a></button>
-							</p>
-							<div class="collapse" id="collapseExample">
-								<div class="card card-body" style="font-size:large">
-									<a
-										href="https://classroom.google.com/c/NDk2MzMyMzkyNDEx/a/NTU1MzU1ODU3NjAw/details">Google
-										Classroom</a>
-									Translate a text from technical document using following translators: (around
-									2million characters)
-									<br>
-									T1: https://aws.amazon.com/translate/
-									<br>
 
-									T2: https://www.systran.net/en/translate/
-									<br>
+		<h1 class="my-4 font-weight-bold">Materials for AI</h1>
 
-									T3: https://www.deepl.com/translator
-									<br>
-
-									T4: Google translator
-									<br>
-
-									T5: Microsoft Bing translator
-									<br>
-									<br>
-									<br>
-
-									Adequacy:
-									Source text adherence is judged to the source text norms and meaning, in terms of
-									how well the target text represents the informational content of the source text.
-									<br>
-									<br>
-
-									Fluency:
-									The degree of adherence to the target text and target language norms, referring, for
-									example, grammatical correctness and clarity. When judging fluency, the source text
-									is not relevant.
-									<br>
-
-									Compare the quality of translation for each sentence translation based on
-									a) Adequacy : All Meaning 5 ; Most Meaning 4 ; Much Meaning 3; Little Meaning 2;
-									None 1.
-
-									b) Fluency : Flawless Language 5; Good Language 4; Non-native Language 3; Disfluent
-									Language 2; Incomprehensible 1. You may consider around 200 sentences for Human
-									evaluation. Select sentences having varied length.
-									<br>
-									<br>
-
-									Analyze your results and give your comments
-									To be submitted: Cover-page Source text in language S1; Target texts translated by
-									T1-T5 tools Evaluation Scores for each translator with different parameter settings
-									Identify the issues related to language divergence aspects, out of vocabulary words,
-									length and construct of sentences, reordering, alignments,... sentence length: 1-10
-									words; 11-20 words; 20-40 words; 40+ words
-
-									list all issues that you may have come across while performing this task.
-
-									Include all references in your submissions
-
-									For submission use latex files (you may use overleaf)
-								</div>
-							</div>
-						</div>
-					</div>
+		<div class="grid-item col-md-3 mb-4">
+			<div class="card">
+				<div class="card-header">
+					Deep Learning
 				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 30rem; margin: 1rem;">
-					<!-- <img src="./Assets/Assign1.png" class="card-img-top" alt="assignment1 Image"> -->
-					<div class="card-body">
-						<h5 class="card-title" style="font-size:x-large;color: #0a53be;">Assignment-03 </h5>
-						<p class="card-text" style="font-size:large"> IBM1 model for Machine Translation</p>
-						<a href="./Assignment-3/assignment3.html" class="btn btn-primary">Solution</a>
-						<a href="./Assignment-3/notebook/ibmModel1.ipynb - Colaboratory.pdf" download
-							class="btn btn-secondary">Download <i class="bi bi-download"></i></a>
-						<div>
-							<p>
-								<button style="border-radius:10px; margin-top:8px; color:dimgray"><a class="btn"
-										style="color:black;" data-bs-toggle="collapse" href="#collapseExample3"
-										role="button" aria-expanded="false" aria-controls="collapseExample">
-										Details
-									</a></button>
-							</p>
-							<div class="collapse" id="collapseExample3">
-								<div class="card card-body" style="font-size:large">
-									<!-- <a href="https://classroom.google.com/c/NDk2MzMyMzkyNDEx/a/NTU1MzU1ODU3NjAw/details">Google Classroom</a> -->
-									Develop an IBM1 Model for Source (S1) and Target (Ti) language. (around 20/50/100
-									sentences)
-									<br>
-									<br>
-
-									<b>1.</b> Get the translation from translation tools T1-T5 Translation.
-									For each translation develop IBM1 model and compare your results
-									Analyze each translation with respect to problems like picking
-									the wrong word sense of a polysemous word, or word ordering problems,
-									or other problems. Document your observation explicitly for each sentence.
-									<br>
-									<br>
-
-									Generate a table containing the word translation probabilities that were learned
-									List the reference sentence and the translated sentence using IBM1 model.
-									Plot graphs for your results
-									Compare alignments with mixed case versus lowercase.
-									Generate an alignment in the opposite direction
-									<br>
-									<br>
-
-									Calculate p(e|f) for the first three sentences.
-									<br>
-									<br>
-									<b>2.</b> Download the data from the joshua indian corpora page (google: joshua
-									indian corpora), ideally you should only use a small number of short sentences at
-									first, so that things run quickly.
-									<br> Take a set of sentences which have prior correct reference translation. Take 5
-									sentences for which you get bad output from T1-T5 translators. Translate them again,
-									preferably from a different IP
-									<br> address. Compare the outcome
-									<br><br>
-									<br> Take the first 5 sentences of the *training* data for the language
-									<br> you are working with from the Indian Parallel Corpora. Try these
-									<br>sentences in T1-T5 translators (in the Hindi/Tamil/Urdu to English
-									<br>direction). Compare the outputs with the
-									<br>English parallel sentences Document your observations about different English
-									translations. Compare all the translators. Analyze the issues caused by phrase-based
-									SMT.
-									<br><br>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 30rem; margin: 1rem;">
-					<!-- <img src="./Assets/Assign1.png" class="card-img-top" alt="assignment1 Image"> -->
-					<div class="card-body">
-						<h5 class="card-title" style="font-size:x-large;color: #0a53be;">Assignment-04</h5>
-						<p class="card-text" style="font-size:large"> Extraction of Syntactic Translation Models from
-							Parallel Data using Syntax from Source and Target Languages</p>
-						<a href="./Assignment 1/assignment1.html" class="btn btn-primary disabled">Solution</a>
-						<a href="./Moses/Machine Translation Evaluation.pdf" download
-							class="btn btn-secondary disabled">Download <i class="bi bi-download"></i></a>
-						<div>
-							<p>
-								<button style="border-radius:10px; margin-top:8px; color:dimgray"><a class="btn"
-										style="color:black;" data-bs-toggle="collapse" href="#collapseExample4"
-										role="button" aria-expanded="false" aria-controls="collapseExample">
-										Details
-									</a></button>
-							</p>
-							<div class="collapse" id="collapseExample4">
-								<div class="card card-body" style="font-size:large">
-									<!-- <a href="https://classroom.google.com/c/NDk2MzMyMzkyNDEx/a/NTU1MzU1ODU3NjAw/details">Google Classroom</a> -->
-									Extraction of Syntactic Translation Models for English -Indic language pair
-									Demonstrate your framework for different categories of sentences. Take at least 100
-									sentences for each category. Make sure you collect sentences of different lengths (
-									less than 10 words; 11-20 words; 20-40 words; 40+ words)
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 30rem; margin: 1rem;">
-					<!-- <img src="./Assets/Assign1.png" class="card-img-top" alt="assignment1 Image"> -->
-					<div class="card-body">
-						<h5 class="card-title" style="font-size:x-large;color: #0a53be;">Moses for Machine Translation
-						</h5>
-						<p class="card-text" style="font-size:large"> Using Moses have to translate and check the
-							evaluation scores of BLEU,METEOR,TER,WER
-						</p>
-						<a href="./Assignment 1/assignment1.html" class="btn btn-primary disabled">Solution</a>
-						<a href="./Moses/Machine Translation Evaluation.pdf"
-							class="btn btn-secondary">Download <i class="bi bi-download"></i></a>
-						<div>
-							<p>
-								<button style="border-radius:10px; margin-top:8px; color:dimgray"><a class="btn"
-										style="color:black;" data-bs-toggle="collapse" href="#collapseExample2"
-										role="button" aria-expanded="false" aria-controls="collapseExample">
-										Details
-									</a></button>
-							</p>
-							<div class="collapse" id="collapseExample2">
-								<div class="card card-body" style="font-size:large">
-									<!-- <a href="https://classroom.google.com/c/NDk2MzMyMzkyNDEx/a/NTU1MzU1ODU3NjAw/details">Google Classroom</a> -->
-									Collect a parallel corpus of English - Hindi , or other near similar Indian
-									languages.Determined by the quality sentence pairs using statistical machine
-									translation (Moses, phrase-based)
-									<br>Use BLEU score, METEOR, TER and WER measures to access the quality of MT
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col">
-			<div class="card" style="width: 30rem; margin: 1rem;">
-				<!-- <img src="./Assets/Assign1.png" class="card-img-top" alt="assignment1 Image"> -->
 				<div class="card-body">
-					<h5 class="card-title" style="font-size:x-large;color: #0a53be;">
-						Assignment-05
-					</h5>
-					<p class="card-text" style="font-size:large">NMT English-Hindi
+					<h5 class="card-title">NPTEL Notes</h5>
+					<p class="card-text">Notes for NPTEL lecture. <br>credit: <a
+							href="https://archive.nptel.ac.in/courses/106/106/106106184">https://archive.nptel.ac.in/courses/106/106/106106184</a>
 					</p>
-					<a href="./Assignment-5/assignment5.html" class="btn btn-primary">Solution</a>
-					<a href="./Assignment-5/neural_machine_translation_attention_mechanism.pdf"
-						class="btn btn-secondary">Download <i class="bi bi-download"></i></a>
-					<div>
-						<p>
-							<button style="border-radius:10px; margin-top:8px; color:dimgray"><a class="btn"
-									style="color:black;" data-bs-toggle="collapse" href="#collapseExample5"
-									role="button" aria-expanded="false" aria-controls="collapseExample">
-									Details
-								</a></button>
-						</p>
-						<div class="collapse" id="collapseExample5">
-							<div class="card card-body" style="font-size:large">
-								Develop English to Hindi translation system using at least two different NMT architecture.  Use different configurations of these systems. Include discussion about the models as well.
-<br>Analyze the performance  using various evaluation metrics.
-
-							</div>
-						</div>
-					</div>
+					<a href="./DeepLearning/notes.html" class="btn btn-primary btn-sm">View</a>
 				</div>
 			</div>
-		</div>
 		</div>
 	</div>
 
+	</div>
 
 
 	<div style="height:30rem"> </div>
