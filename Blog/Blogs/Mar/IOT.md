@@ -2,7 +2,8 @@
 
 Newly upgraded prototypes have been designed to overcome the existing limitations. The three-tier architecture of the proposed prototype for monitoring miners’ health.
 
-#
+# 
+
 ## Sensing Unit
 
 This tier act as a base for monitoring and alerting system. The
@@ -195,7 +196,25 @@ IoT gateways. The responsibility of this tier is to communicate both
 sensing and monitoring tier, i.e., gather data from the sensing layer,
 after processing, transfer the data to the monitoring layer.
 
- 
+Here microcontroller acts as a master while nRF1 acts as an en-
+slaved person. The microcontroller gets the value from all the
+sensors and processes to determine the working environment’s
+nature. For communicating with the receiving unit, nRF1 is used.
+Master–slave architecture is followed by the microcontroller and
+by the nRF1. After receiving the request (for sending environ-
+mental and miner’s health condition to receiving unit) from the
+masters, enslaved person, i.e., nRF1, gathers the sensors value
+and transfer it to nRF2 of the receiving unit.The
+architecture of receiving unit. nRF2 receives the values from
+the transmitting unit. This unit performs two kinds of activities.
+Firstly, it sends the values to the nRF3 to save the miners’
+health condition for future use. Secondly, based on the environ-
+ment type, necessary action is performed, i.e., by sharing the
+environmental condition and the location of the miners to the
+monitoring. The architecture of the central unit. This
+unit is responsible for gathering the miner’s environmental and
+health conditions.
+
 ![Architecture](./architecture.png)
 
 ### **1. RFID Tag and Reader**
@@ -209,14 +228,51 @@ The RFID readers convert radio signals to helpful information;
 this information is transferred to the communicating host system
 to locate the real-time position on the miner.
 
+### **2. nRF24L01 Module**
+
+This module utilizes 2.4 GHz with 250 Kbps–2 Mbps speed. It
+covers up to 100 meters of area. It could utilize 125 unique
+channels that allow having a system of 125 freely functioning
+devices in a single region. Every path could have six addresses.
+Each unit can speak with six different units. Meanwhile, 12 mA
+is the power utilization of this module in between communication, which is lower than an LED. 1.9 to 3.6 V is the working
+voltage of the module. However, the best part is that alternate
+nodes endure 5 V logic. Thereby, without using any logic-level
+converters, we could easily interface it to an Arduino.
+
+![nRF24L01Image](./nrf24L01.png)
+
+### RF Channel Frequency
+
+The nRF24L01+ module transmits and receives data on a specific frequency known as a channel. For two or more modules to communicate with each other, they must be on the same channel. This channel can have any frequency in the 2.4 GHz ISM band, or more precisely, any frequency between 2.400 and 2.525 GHz (2400 to 2525 MHz).
+Each channel takes up less than 1 MHz of bandwidth. This gives us 125 possible channels with a 1MHz spacing.
+This means that the nRF24L01+ can operate on 125 different channels, allowing you to build a network of 125 independently operating modems in one location
+
+![image](https://lastminuteengineers.b-cdn.net/wp-content/uploads/arduino/nRF24L01-Wireless-Transceiver-2.4GHz-125-RF-Channels-1MHz-Spacing.png)
+
+### Multiceiver
+
+The nRF24L01+ includes a feature known as **Multiceiver**. It stands for Multiple Transmitter Single Receiver.
+In a multiceiver network, each RF channel is logically divided into six parallel data channels known as data pipes. In other words, the data pipe is one of six logical channels within a single physical RF channel. Each data pipe has its own unique address, known as a data pipe address. Only one data pipe can receive a packet at a time
+
+![image](https://lastminuteengineers.b-cdn.net/wp-content/uploads/arduino/nRF24L01-Wireless-Multiceiver-Network-Multiple-Transmitters-Single-Receiver.png)
+
+
 
 ### Reference
 The LM7805 is a voltage regulator that outputs +5 volts
 
-#
 ## Monitoring Unit
 
-#
+This tier has two kinds of responsibilities. The first responsibility
+is to store the reading of the sensors and the environment type
+(determined by the computing unit) in the cloud database. The
+second responsibility is to generate an alert message to the
+monitoring and the rescue team, and the miner’s live location
+when the environment type is non-preferable.
+
+
+# 
 
 # References
 
@@ -224,4 +280,4 @@ The LM7805 is a voltage regulator that outputs +5 volts
 
 2. [Wikipedia Triple point](https://en.wikipedia.org/wiki/Triple_point)
 
-3. 
+3. ["last minute engineers" for module details](https://lastminuteengineers.com/)
