@@ -263,7 +263,12 @@ In a multiceiver network, each RF channel is logically divided into six parallel
 The LM7805 is a voltage regulator that outputs +5 volts
 
 ## Monitoring Unit
-
+This tier has two kinds of responsibilities. The first responsibility
+is to store the reading of the sensors and the environment type
+(determined by the computing unit) in the cloud database. The
+second responsibility is to generate an alert message to the
+monitoring and the rescue team, and the miner’s live location
+when the environment type is non-preferable.
 This tier has two kinds of responsibilities. The first responsibility
 is to store the reading of the sensors and the environment type
 (determined by the computing unit) in the cloud database. The
