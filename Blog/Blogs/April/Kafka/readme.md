@@ -169,7 +169,6 @@ It ensures no data loss if we configure it properly.
 It ensures zero downtime when required number of
 present in the cluster.
 7. Reliability
-20:35
 Kafka is reliable because it provides above features.
 
 
