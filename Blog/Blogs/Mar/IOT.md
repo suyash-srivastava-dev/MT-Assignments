@@ -1,3 +1,12 @@
+# Introduction
+
+- Use of Information and Communication Technologies (ICT) in Personal Protective Equipment (PPE) has improved workplace safety 
+- Added features environmental sensing and risk identification
+- Mine workers are at risk of health problems and death due to toxic gases and changes in ambient conditions, but traditional warning systems are ineffective.
+- A proposed real-time surveillance helmet that uses IoT sensors to detect harmful gases, dust, temperature, and more, with a built-in GPS tracker, will reduce the number of workplace accidents and deaths.
+- The accuracy of the proposed prototype has been evaluated in three working environments, with an accuracy of approximately 96-99%.
+
+
 # Proposed Methodology
 
 Newly upgraded prototypes have been designed to overcome the existing limitations. The three-tier architecture of the proposed prototype for monitoring miners’ health.
@@ -269,12 +278,114 @@ is to store the reading of the sensors and the environment type
 second responsibility is to generate an alert message to the
 monitoring and the rescue team, and the miner’s live location
 when the environment type is non-preferable.
-This tier has two kinds of responsibilities. The first responsibility
-is to store the reading of the sensors and the environment type
-(determined by the computing unit) in the cloud database. The
-second responsibility is to generate an alert message to the
-monitoring and the rescue team, and the miner’s live location
-when the environment type is non-preferable.
+
+The sensors are mounted on the helmet, which detects the
+individual health parameters (body temperature and heartbeat)
+and individual’s nearby environments parameters (environment
+temperature, presence of silica dust particle, fire, humidity, and
+presence of harmful gases). The captured real-time parameters
+values are saved in the cloud for future health analysis of the
+miner worker. The captured values are further used to determine
+the nature of the working environment, i.e., preferable or non-
+preferable. If the working environment is preferable, sensors
+start capturing health parameters and environment parameters
+again. The predefined threshold value is set in the systems;
+for example, the buzzer will generate 1000 PPM for pollution
+indication on violation an alert.Purpose of this model is to reduce the number of accidents and deaths of mining workers. On the other hand, in
+emergencies, a rescue team will get an alert with a live location
+to rescue the victim.
+
+## Case
+
+### 1. **Case 1: Let us consider a scenario when Temperature-20 ◦ C Air ppm-350 ppm Heart rate-175 Dust Particle-18 Humidity-19 Flame-0**
+
+Proposed invention: It will read data through sensors; in this
+case, threshold values are normal. Thus, the system will function
+normally, and meanwhile, data will be sent to the cloud in real-
+time, which will be recorded for further analysis and report
+generation.
+
+**SYSTEM- Preferable**
+
+### 2. **Case 2: Let us consider a scenario where Temperature-20 ◦ C Air ppm-< 2000 ppm Heart rate-175 Dust Particle-27 Humidity-50 Flame-0**
+
+it will read data through sensors; in this
+case, the threshold values of the Gas Sensor exceed normal. Thus,
+the Gas Sensor will be triggered as the ppm value is greater than
+the threshold value. The system will detect poisonous gas, and a
+fuzzy inference system determines the environment type. If the
+environment type is non-preferable, it will trigger a message to
+generate an immediate alert through Buzzer and send a message
+to the cloud to generate an alert (message and live location of
+the miner) to the monitoring and rescue team.
+
+**SYSTEM- Non-Preferable (Poisonous Gas), alerts generated.**
+
+### 3. **Case 3: Let us consider a scenario where Temperature-30 ◦ C Air ppm-350 ppm Heart rate-300 Dust Particle-55 Humidity-50 Flame-0**
+
+it will read data through sensors; in this
+case, threshold values are exceeded than normal. In this case,
+the fuzzy inference system determines the environment type.
+If the environment type is non-preferable, it will immediately
+determine that individual worker health is not normal. It will
+trigger a message to the cloud for generating an alert to the
+monitoring and rescue team regarding Health issues of miners.
+Note: Gas Sensor measures the reflection and absorption of
+infrared light while interacting with hazardous gases.
+
+**System: Non-Preferable (Not Well, Needs to Rest or Needs to see Doctor). Alerts generated**
+
+### 4. **Case 4: Let us consider a scenario where Temperature-30 ◦ C Air ppm-< 2000 ppm Heart rate-300 Dust Particle-55 Humidity-50 Flame-0**
+
+Proposed Invention: it will read data through sensors; in this
+case, the threshold values of the Gas Sensor exceed normal.
+Thus, the Gas Sensor, Heart Sensor and Dust Particle will be
+triggered as the gauged value is greater than the threshold
+value. The system will detect poisonous gas, dust particle, and a
+fuzzy inference system determines the environment type. If the
+environment type is non-preferable, it will trigger a message to
+generate an immediate alert through Buzzer and send a message
+to the cloud to generate an alert (message and live location of
+the miner) to the monitoring and rescue team.
+
+**SYSTEM- Non-Preferable (Poisonous Gas Not Well, Needs to Rest or Needs to see Doctor), alerts generated.**
+
+# Experimental Setup and Results
+
+The proposed prototype comprises of multiple senors, for sensing multiple parameters. A controller for receiving real-time data from the sensors where data is compared with threshold values of each parameter for generating alerts and warning.
+
+It is an IoT-based system and comprises a wireless communication
+module for wireless transmission of real-time data from multiple sensors to a server in a cloud network. The system is
+configured to generate warnings for at least three conditions in the
+mine.
+
+The proposed prototype is evaluated in three different environmental setups, i.e., indoor, outdoor, and coal mines.
+
+The efficiency of the proposed prototype:
+i) indoor environment setup is conducted in a
+small room in which only one person is present. This evaluation process
+is carried out for nine days, with 53 readings per day.
+
+ii) The outdoor environment setup is conducted in the industry (plastic industry) for nine days of 65 readings per day.
+
+iii) The coal mines environment setup
+is conducted in coal mines for three days of 199 readings per day.
+
+![exp](./experimentalSetup.png)
+
+
+
+![precision](./precision.png)
+
+## In comparision to Sattar, performance measured in three scenarios 
+
+Sattar H : [An intelligent air quality sensing system for open-skin wound monitoring](https://scholar.google.com/scholar_lookup?title=An%20intelligent%20air%20quality%20sensing%20system%20for%20open-skin%20wound%20monitoring&publication_year=2019&author=H.%20Sattar&author=I.S.%20Bajwa&author=U.F.%20Shafi)
+
+
+![indoor](https://ars.els-cdn.com/content/image/1-s2.0-S0140366422002341-gr10_lrg.jpg)
+![outdoor](https://ars.els-cdn.com/content/image/1-s2.0-S0140366422002341-gr11_lrg.jpg)
+![coal](https://ars.els-cdn.com/content/image/1-s2.0-S0140366422002341-gr12_lrg.jpg)
+
 
 
 # 
