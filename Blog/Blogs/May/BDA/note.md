@@ -28,3 +28,6 @@ Hadoop supports various serialization formats, including:
 6. XML: XML is a text-based serialization format that is used to exchange data between different systems. It is a human-readable format that can be easily understood and edited by humans.
 
 Each serialization format has its own strengths and weaknesses, and the choice of format depends on the requirements of the application. For example, Avro is a good choice when schema evolution is required, while Protocol Buffers is a good choice when the size of the data is a concern. The choice of serialization format can have a significant impact on the performance and efficiency of MapReduce jobs in Hadoop.
+
+
+# 
