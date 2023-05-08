@@ -304,3 +304,12 @@ There are many different research areas within computer vision, some of which in
 
 These are just a few examples of the many research areas within computer vision. The field is constantly evolving, and new research areas and applications are being discovered all the time.
 
+# Why does the Gaussian give a nice smooth image, but the square filter give edgy artifacts?
+
+The Gaussian filter is a type of smoothing filter that is designed to blur an image and reduce high-frequency noise while preserving the overall structure of the image. The filter works by applying a Gaussian function, which has a bell-shaped curve, to the image. The Gaussian function assigns higher weights to pixels closer to the center of the filter and lower weights to pixels farther away, resulting in a smooth, continuous blending of pixel values.
+
+On the other hand, a square filter (also known as a box filter) is a type of filter that applies a simple averaging operation to a group of adjacent pixels. The filter replaces the value of each pixel with the average value of its surrounding pixels within the filter kernel. However, this averaging operation does not preserve the edges and details in the image, resulting in a loss of sharpness and the appearance of edgy artifacts.
+
+The reason for this difference in performance is that the Gaussian filter takes into account the spatial relationships between neighboring pixels and assigns weights based on these relationships, while the square filter treats all pixels within the filter kernel equally, regardless of their spatial relationship to each other. As a result, the Gaussian filter is able to better preserve the edges and details in the image, while the square filter tends to blur them.
+
+In summary, the Gaussian filter provides a smooth image by taking into account the spatial relationships between neighboring pixels and assigning weights based on these relationships, while the square filter tends to produce edgy artifacts because it treats all pixels within the filter kernel equally, regardless of their spatial relationship to each other.
